@@ -268,8 +268,12 @@ let names2 = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 
 var names1 = [55,22,11,5,65,112,14,555]
 sort(&names1, { (s1:Int, s2:Int) -> Bool in return s1 > s2 })
+sort(&names1, {s1,s2 in s1 > s2})
+sort(&names1, >)
 
+var arry :String[] = ["1","2"]
 
+var arry1 :[String] = ["1","2"]
 
 
 
