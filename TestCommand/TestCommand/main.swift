@@ -218,9 +218,56 @@ func arti(numbers : Double...)->String{
     return msg
 }
 
-println(arti(113.0 , 114.0 , 115.0 , 116.0))
+//println(arti(113.0 , 114.0 , 115.0 , 116.0))
+
+var strA = "1"
+var strB = "2"
+func swap(inout a:String,inout b:String){
+    var c = a
+    a = b
+    b = c
+}
+
+func mathFunc(stra :String,strb:String)->String{
+    return "\(stra)\(strb)"
+}
 
 
+func mathFuncEx(maths:(String,String)->String,paraA:String,paraB:String)->String{
+    return maths(paraA,paraB)
+}
+
+var math : (String,String)->String = mathFunc
+//println(mathFuncEx(mathFunc,"123","3221"))
+
+func stepOne(input :Int)->Int{
+    return input + 1
+}
+
+func stepTwo(input:Int)->Int{
+    return input - 1
+}
+
+func choose(isEx:Bool)->(Int)->Int{
+    return isEx ? stepOne:stepTwo
+}
+
+var currentValue = 3
+var val = choose(currentValue>0)
+//println("\(val(12342))")
+
+
+func backwards(s1:String,s2:String)->Bool{
+    return s1>s2
+}
+
+
+let names2 = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+
+
+var names1 = [55,22,11,5,65,112,14,555]
+sort(&names1, { (s1:Int, s2:Int) -> Bool in return s1 > s2 })
 
 
 
