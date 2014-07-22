@@ -65,7 +65,7 @@ var inc = makeIncrementer()
 // 函数也可以当做参数传入
 // BEGIN
 //
-func hasAnyMathces(list:Int[],condition:Int->Bool)->String{
+func hasAnyMathces(list:[Int],condition:Int->Bool)->String{
     
     for item in list{
         if condition(item){
@@ -271,7 +271,7 @@ sort(&names1, { (s1:Int, s2:Int) -> Bool in return s1 > s2 })
 sort(&names1, {s1,s2 in s1 > s2})
 sort(&names1, >)
 
-var arry :String[] = ["1","2"]
+var arry :[String] = ["1","2"]
 
 var arry1 :[String] = ["1","2"]
 
